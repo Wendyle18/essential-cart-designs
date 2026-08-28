@@ -8,7 +8,6 @@ A CSS-only visual treatment for the Essential Cart Drawer. The implementation tr
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1gUBtw1I9POgR8I8P6rAmVuOJx3cFwfY9/view?usp=sharing">
-    <img width="936" alt="Animated walkthrough of the Essential Cart Drawer skeuomorphic design" src="https://drive.google.com/uc?export=view&id=1gUBtw1I9POgR8I8P6rAmVuOJx3cFwfY9" />
   </a>
 </p>
 
