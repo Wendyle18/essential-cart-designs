@@ -104,4 +104,3 @@ The material effect is intended for current versions of Chrome, Safari, Edge, an
 ## Files
 
 - [`skeuomorphism-cart-drawer.css`](./skeuomorphism-cart-drawer.css): production CSS implementation
-- [`review-follow-up-template.html`](./review-follow-up-template.html): local visual-review template
