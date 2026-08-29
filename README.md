@@ -1,5 +1,27 @@
 # Essential Cart Drawer Designs
 
+## Shared implementation approach
+
+- No Essential Cart Drawer HTML changes are required.
+- Stable `data-essential-cart-element` attributes target app components instead of generated class names.
+- Specificity is deliberate and scoped to the cart drawer.
+- `!important` is limited to inline or injected rules that cannot otherwise be overridden reliably.
+- Product items, reward progress, upsells, announcements, order protection, discount controls, footer content, and checkout states remain functional.
+- Keyboard focus and responsive mobile behavior are retained.
+
+## Installation
+
+1. Choose one design direction; do not combine both complete themes.
+2. Copy the selected stylesheet into the Essential Cart Drawer custom CSS editor.
+3. Save the configuration and reopen the drawer.
+4. Test populated, empty, discounted, upsell, and disabled-checkout states.
+5. Verify desktop and mobile layouts before publishing.
+
+## Browser support
+
+The designs use modern CSS features such as custom properties, gradients, native nesting, `backdrop-filter`, and `:is()`. Current Chrome, Edge, Safari, and Firefox releases are recommended. Where blur is unavailable, the interface retains a readable solid-color fallback.
+
+
 Two CSS-only visual directions for Essential Cart Drawer. Both preserve the app’s existing DOM and cart behavior while replacing the default presentation with a deliberate, production-ready interface.
 
 | Design | Direction | Palette | Character |
@@ -43,28 +65,3 @@ Its visual identity comes from the neon reward progress, illuminated milestone a
 
 [View `glassmorphism-cart-drawer.css` on GitHub](https://github.com/Wendyle18/essential-cart-designs/blob/main/glassmorphism-cart-drawer.css). The production implementation remains below Essential Cart Drawer’s 5,000-character custom-CSS limit.
 
-## Shared implementation approach
-
-- No Essential Cart Drawer HTML changes are required.
-- Stable `data-essential-cart-element` attributes target app components instead of generated class names.
-- Specificity is deliberate and scoped to the cart drawer.
-- `!important` is limited to inline or injected rules that cannot otherwise be overridden reliably.
-- Product items, reward progress, upsells, announcements, order protection, discount controls, footer content, and checkout states remain functional.
-- Keyboard focus and responsive mobile behavior are retained.
-
-## Installation
-
-1. Choose one design direction; do not combine both complete themes.
-2. Copy the selected stylesheet into the Essential Cart Drawer custom CSS editor.
-3. Save the configuration and reopen the drawer.
-4. Test populated, empty, discounted, upsell, and disabled-checkout states.
-5. Verify desktop and mobile layouts before publishing.
-
-## Browser support
-
-The designs use modern CSS features such as custom properties, gradients, native nesting, `backdrop-filter`, and `:is()`. Current Chrome, Edge, Safari, and Firefox releases are recommended. Where blur is unavailable, the interface retains a readable solid-color fallback.
-
-## Repository reference files
-
-- `Cart Drawer.md` — captured Essential Cart Drawer DOM
-- `CSS for cart drawer.md` — captured application CSS
