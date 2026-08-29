@@ -1,105 +1,66 @@
-# Essential Cart Drawer: Skeuomorphic Silver Glass
+# Essential Cart Drawer Designs
 
-A CSS-only visual treatment for the Essential Cart Drawer. The implementation transforms the existing drawer into a polished silver-glass interface with tactile controls, layered depth, soft highlights, and responsive behavior without moxqdifying the generated HTML.
+Two CSS-only visual directions for Essential Cart Drawer. Both preserve the app’s existing DOM and cart behavior while replacing the default presentation with a deliberate, production-ready interface.
 
-## Visual presentation
+| Design | Direction | Palette | Character |
+| --- | --- | --- | --- |
+| Skeuomorphic Silver Glass | Light, tactile glass | Frosted silver, white, slate | Soft depth and physical controls |
+| Glassmorphism Tech Dark Theme | Transparent dark glass | Midnight navy, cyan, blue, violet | Luminous, technical, and immersive |
 
-### Animated walkthrough
+## Essential Cart Drawer: Skeuomorphic Silver Glass
 
-<p align="center">
-  <a href="https://drive.google.com/file/d/1gUBtw1I9POgR8I8P6rAmVuOJx3cFwfY9/view?usp=sharing">
-  </a>
-</p>
+Silver Glass combines frosted translucency with restrained skeuomorphic depth. Layered highlights, inset edges, soft shadows, and gently raised controls make the drawer feel physical without turning it ornamental.
 
-If the animation does not load inside GitHub's image proxy, [open the GIF presentation in Google Drive](https://drive.google.com/file/d/1gUBtw1I9POgR8I8P6rAmVuOJx3cFwfY9/view?usp=sharing).
+Distinctive details include a bright silver shell, Cabinet Grotesk typography, tactile quantity and remove controls, softly elevated product imagery, a dimensional reward bar, and accessibility fallbacks for reduced motion or transparency.
 
-### Full cart drawer
+### Visual presentation
 
-<p align="center">
-  <img width="936" height="1575" alt="Summer Essentials storefront showing the skeuomorphic Essential Cart Drawer" src="https://github.com/user-attachments/assets/e3130e26-71ad-4670-ae02-4cd31639af9e" />
-</p>
+[View the Skeuomorphic Silver Glass GIF presentation](https://drive.google.com/file/d/1gUBtw1I9POgR8I8P6rAmVuOJx3cFwfY9/view?usp=drive_link)
 
-## Design direction
+### Preview
 
-The drawer uses a cold-luxury, silver skeuomorphic language inspired by precision hardware and translucent interface materials. It combines:
+<img width="936" height="1575" alt="Essential Cart Drawer: Skeuomorphic Silver Glass" src="https://github.com/user-attachments/assets/e3130e26-71ad-4670-ae02-4cd31639af9e" />
 
-- Frosted surfaces with layered translucent fills
-- Bright edge highlights and restrained blue-gray shadows
-- Recessed tracks and tactile raised controls
-- Consistent rounded geometry across cards and inputs
-- A muted slate accent for progress, selected states, and checkout actions
-- Compact spacing that preserves the cart's information hierarchy
+## Essential Cart Drawer: Glassmorphism Tech Dark Theme
 
-This is a web-based glass and skeuomorphic treatment built with CSS. It is not an implementation of Apple's native Liquid Glass material.
+Tech Dark keeps the storefront faintly visible through a translucent midnight drawer. Layered navy glass, controlled blur, fine cool-toned borders, and focused cyan-to-violet light create depth while maintaining a compact and readable shopping flow.
 
-## Implementation principles
+Its visual identity comes from the neon reward progress, illuminated milestone and checkout treatments, transparent product surfaces, dark recessed controls, white typography, and subtle purple atmosphere near the drawer edge.
 
-| Constraint | Implementation |
-| --- | --- |
-| Existing HTML cannot be edited | All styling is applied through CSS selectors only |
-| Generated utility classes may change | Selectors use the stable drawer root and `data-essential-cart-element` attributes |
-| App styles have high specificity | The repeated `#cart-drawer` root intentionally wins the cascade |
-| `!important` should be avoided | Specificity is used first; narrow exceptions are reserved for inline styles |
-| The drawer must remain responsive | Mobile rules retain a full-width drawer with stable inner spacing |
-| Blur may be unavailable or undesirable | Solid-surface and reduced-transparency fallbacks are included |
+### Visual presentation
 
-## Styled surfaces
+[View the Glassmorphism Tech Dark Theme GIF presentation](https://drive.google.com/file/d/1oDUqp4JCSNuGgEuQ5qq-VoCToR1OQut8/view?usp=drive_link)
 
-- Drawer shell, header, title, and close control
-- Reward goal card, progress track, fill, and milestone
-- Product line items, images, prices, quantity controls, and remove actions
-- Recommended-product upsell module and navigation
-- Discount-code and order-note disclosures
-- Subtotal, agreement control, and secure checkout action
-- Third-party loyalty card treatment
-- Keyboard focus, reduced-motion, and reduced-transparency states
+### Preview
+
+<img width="890" height="1595" alt="Essential Cart Drawer: Glassmorphism Tech Dark Theme" src="https://github.com/user-attachments/assets/415518c3-324b-4238-b29e-d4dae1af88c2" />
+
+### Production stylesheet
+
+[`essential-cart-drawer-glassmorphism.css`](./essential-cart-drawer-glassmorphism.css) is the compact production implementation and remains below Essential Cart Drawer’s 5,000-character custom-CSS limit.
+
+## Shared implementation approach
+
+- No Essential Cart Drawer HTML changes are required.
+- Stable `data-essential-cart-element` attributes target app components instead of generated class names.
+- Specificity is deliberate and scoped to the cart drawer.
+- `!important` is limited to inline or injected rules that cannot otherwise be overridden reliably.
+- Product items, reward progress, upsells, announcements, order protection, discount controls, footer content, and checkout states remain functional.
+- Keyboard focus and responsive mobile behavior are retained.
 
 ## Installation
 
-1. Add [`skeuomorphism-cart-drawer.css`](./skeuomorphism-cart-drawer.css) to the storefront's theme or custom CSS area.
-2. Ensure it loads after Essential Cart Drawer's generated stylesheet.
-3. Keep the existing `#cart-drawer` root and `data-essential-cart-element` attributes unchanged.
-4. Clear the storefront cache and test the drawer with multiple products, discounts, and quantities.
+1. Choose one design direction; do not combine both complete themes.
+2. Copy the selected stylesheet into the Essential Cart Drawer custom CSS editor.
+3. Save the configuration and reopen the drawer.
+4. Test populated, empty, discounted, upsell, and disabled-checkout states.
+5. Verify desktop and mobile layouts before publishing.
 
-No HTML or JavaScript changes are required.
+## Browser support
 
-## Design tokens
+The designs use modern CSS features such as custom properties, gradients, native nesting, `backdrop-filter`, and `:is()`. Current Chrome, Edge, Safari, and Firefox releases are recommended. Where blur is unavailable, the interface retains a readable solid-color fallback.
 
-The main material settings are defined near the top of the stylesheet as CSS custom properties:
+## Repository reference files
 
-```css
---ec-glass-shell: rgba(237, 242, 249, 0.76);
---ec-glass-surface: rgba(252, 253, 255, 0.48);
---ec-glass-highlight: rgba(255, 255, 255, 0.92);
---ec-text: #111827;
---ec-text-muted: #687386;
---ec-accent: #64748b;
---ec-radius: 22px;
---ec-radius-control: 16px;
-```
-
-Adjust these tokens to refine the palette while keeping the component rules and hierarchy intact.
-
-## Specificity strategy
-
-Essential Cart Drawer can generate utility selectors with unusually high specificity. The repeated root selector is intentional:
-
-```css
-#cart-drawer#cart-drawer#cart-drawer#cart-drawer#cart-drawer#cart-drawer#cart-drawer.essential-cart-drawer-container
-```
-
-It keeps overrides scoped to the cart drawer and reduces the need for blanket `!important` declarations. Avoid replacing stable selectors with generated classes such as `.x1ghz6dp`, because those class names may change between builds.
-
-## Accessibility and compatibility
-
-- Visible `:focus-visible` outlines support keyboard navigation.
-- `prefers-reduced-motion` shortens decorative transitions.
-- `prefers-reduced-transparency` replaces translucent materials with solid surfaces.
-- A no-`backdrop-filter` fallback keeps text and controls readable.
-- Dynamic viewport units prevent mobile browser chrome from destabilizing the drawer height.
-
-The material effect is intended for current versions of Chrome, Safari, Edge, and Firefox. Browsers without backdrop blur receive the solid fallback treatment.
-
-## Files
-
-- [`skeuomorphism-cart-drawer.css`](./skeuomorphism-cart-drawer.css): production CSS implementation
+- `Cart Drawer.md` — captured Essential Cart Drawer DOM
+- `CSS for cart drawer.md` — captured application CSS
