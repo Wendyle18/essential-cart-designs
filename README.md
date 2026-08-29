@@ -21,6 +21,10 @@ Distinctive details include a bright silver shell, Cabinet Grotesk typography, t
 
 <img width="936" height="1575" alt="Essential Cart Drawer: Skeuomorphic Silver Glass" src="https://github.com/user-attachments/assets/e3130e26-71ad-4670-ae02-4cd31639af9e" />
 
+### Production stylesheet
+
+[View `skeuomorphism-cart-drawer.css` on GitHub](https://github.com/Wendyle18/essential-cart-designs/blob/main/skeuomorphism-cart-drawer.css)
+
 ## Essential Cart Drawer: Glassmorphism Tech Dark Theme
 
 Tech Dark keeps the storefront faintly visible through a translucent midnight drawer. Layered navy glass, controlled blur, fine cool-toned borders, and focused cyan-to-violet light create depth while maintaining a compact and readable shopping flow.
@@ -37,7 +41,7 @@ Its visual identity comes from the neon reward progress, illuminated milestone a
 
 ### Production stylesheet
 
-[`essential-cart-drawer-glassmorphism.css`](./essential-cart-drawer-glassmorphism.css) is the compact production implementation and remains below Essential Cart Drawer’s 5,000-character custom-CSS limit.
+[View `glassmorphism-cart-drawer.css` on GitHub](https://github.com/Wendyle18/essential-cart-designs/blob/main/glassmorphism-cart-drawer.css). The production implementation remains below Essential Cart Drawer’s 5,000-character custom-CSS limit.
 
 ## Shared implementation approach
 
