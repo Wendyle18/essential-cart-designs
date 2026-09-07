@@ -73,7 +73,7 @@ The theme is implemented with compact native CSS and stable `data-essential-cart
 
 ### Production stylesheet
 
-[`playful-shopping-bag-cart-drawer.css`](./playful-shopping-bag-cart-drawer.css)
+[`playful-shopping-bag-cart-drawer.css`](./playful-cart-drawer.css)
 
 ## Shared implementation approach
 
